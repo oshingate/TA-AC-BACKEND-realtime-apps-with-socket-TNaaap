@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><strong>Chat-App</strong></header>
+    <main>
+      <section class="sec-padding">
+        <h1>You Can Chat Here</h1>
+      </section>
+
+      <section class="sec-padding chat-sec">
+        <article class="chat-box">
+          <div class="chat">
+            <ul id="root"></ul>
+          </div>
+          <div class="input-div">
+            <input type="text" name="input" id="input" />
+            <input type="button" value="Send" id="btn" />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+
+      let root = document.getElementById('root');
+      let input = document.getElementById('input');
+      let btn = document.getElementById('btn');
+
+      //on start
+
+      socket.on('content', (messages) => {
+        console.log(messages);
+        input.innerText = '';
+        root.innerHTML = messages
+          .map((message) => {
+            return `<li>${message}</li>`;
+          })
+          .join(' ');
+      });
+
+      //event listener on btn
+
+      btn.addEventListener('click', (event) => {
+        if (!input.value) {
+          return;
+        }
+
+        socket.emit('addMessage', input.value);
+      });
+    </script>
+  </body>
+</html>
