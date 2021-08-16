@@ -1,0 +1,194 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//custome
+
+body {
+  font-size: 20px;
+  background-color: lightblue;
+}
+.sec-padding {
+  padding: 2rem 0;
+}
+
+header {
+  padding: 1rem 0;
+  text-align: center;
+  strong {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgb(15, 15, 58);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  color: rgb(65, 126, 141);
+}
+
+//chat-sec
+
+.chat-sec {
+  .chat-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .chat {
+    ul {
+      padding: 1rem;
+      li {
+        background-color: rgb(212, 208, 208);
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+      }
+    }
+  }
+  .input-div {
+    display: flex;
+    margin: 2rem 0;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+    #input {
+      width: 80%;
+    }
+    #btn {
+      width: 20%;
+    }
+  }
+}
